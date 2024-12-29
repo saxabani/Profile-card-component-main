@@ -1,0 +1,90 @@
+/* Start Variable */
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+/* End Variable */
+
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: "Kumbh Sans", serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+    position: relative;
+    overflow: hidden;
+    background: url(./images/bg-pattern-top.svg) calc(50vw - 978px) calc(50vh - 978px),
+    url(./images/bg-pattern-bottom.svg) 50vw 50vh;
+    background-repeat: no-repeat;
+    background-color: var(--Dark-cyan);
+}
+
+/* End Global Rules */
+
+/* Start Main */
+main {
+    max-width: 400px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+main .container {
+    position: relative;
+}
+main .container > img {
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    border: 7px solid white;
+    left: 50%;
+    top: -134px;
+    transform: translate(-50%);
+}
+main .container .personal-info {
+    margin-top: 80px;
+    border-bottom: 1px solid var(--Dark-gray);
+    padding-bottom: 10px;
+}
+main .container .personal-info .name {
+    margin-bottom: -5px;
+    font-size: .8rem;
+}
+main .container .personal-info .name .age {
+    color: var(--Dark-gray);
+    font-weight: 500;
+    margin-left: 7px;
+}
+main .container .social-media {
+    margin-block: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+main .container .personal-info .name,
+main .container .social-media div p:first-of-type {
+    font-weight: 800;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 1.2rem;
+}
+main .container .social-media div p:first-of-type {
+    margin-bottom: -5px;
+}
+main .container .personal-info .city,
+main .container .social-media p:last-of-type {
+    color: var(--Dark-grayish-blue);
+}
+main .container .social-media p:last-of-type {
+    font-size: .8rem;
+}
+/* End Main */
